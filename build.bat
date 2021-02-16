@@ -1,0 +1,1 @@
+electron-packager . FKW  --platform=win32 --arch=x64 --icon=icon.ico --prune=true --out=release-builds --version-string.CompanyName="Fabri'know" --version-string.FileDescription=CE --version-string.ProductName="Fabri'Know AllInOnePlace"
