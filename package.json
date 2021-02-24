@@ -4,7 +4,9 @@
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron ./main.js",
+    "rebuild": "./node_modules/.bin/electron-rebuild",
+    "deploy": "node ./config/firebase-deploy.js"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -21,7 +23,10 @@
   },
   "dependencies": {
     "custom-electron-titlebar": "^3.2.6",
+    "electron-firebase": "^1.0.0",
+    "electron-localshortcut": "^3.2.1",
     "electron-package": "^0.1.0",
-    "electron-tabs": "^0.15.0"
+    "electron-tabs": "^0.15.0",
+    "firebase": "^8.2.9"
   }
 }

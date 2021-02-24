@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Start Page | Fabri'Know</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script async defer src="./buttons.js"></script>
+  <script async defer src="./renderer.js"></script>
+  <link rel="stylesheet" href="./normalize.min.css">
+  <link rel='stylesheet' href='./css.css?family=Roboto:300,400,500|Product+Sans:300,400,500|Material+Icons'>
+  <link rel='stylesheet' href='./bootstrap.min.css'>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="node_modules/electron-tabs/electron-tabs.css">
+</head>
+<body>
+  <div class="etabs-tabgroup">
+    <div class="etabs-tabs"></div>
+    <div class="etabs-buttons"></div>
+  </div>
+  <div class="etabs-views"></div>
+  <div id="content"></div>
+  <div class="fluid-container">
+    <div class="sites">
+      <a id="3cx" href="https://appel.comon-real.fr/webclient/#/people"><img src="./images/3cx.png" /><span id="title">3CX</span></a>
+      <a id="Google Drive" href="https://drive.google.com/drive/u/0/folders/1yPR7y1qWI_arTacQBcMMeVkjVJpMryJC"><img src="./images/Google_Drive_logo.png" /><span id="title">Google Drive</span></a>
+      <a id="Notion" href="https://www.notion.so/fabriknow"><img src="./images/Notion_app_logo.png" /><span id="title">Notion</span></a>
+      <a id="Notion" href="https://frame.io"><img src="./images/Frame.io_.png" /><span id="title">Frame.io</span></a>
+      <a href="./baipgmmeifmofkcilhccccoipmjccehn.crx">https://chrome.google.com/webstore/detail/3cx/baipgmmeifmofkcilhccccoipmjccehn</a>
+   </div>
+  </div>
+  <script>
+    var links = document.links;
+for (var i = 0; i < links.length; i++) {
+     mainWindow.loadURL(links[i])
+}
+  </script>
+  <script>
+    //const TabGroup = require('electron-tabs') normally but for demo :
+    const TabGroup = require("/index");
+  
+    let tabGroup = new TabGroup({
+      newTab: {
+        title: 'New Tab'
+      }
+    });
+  
+    tabGroup.addTab({
+      title: 'Google',
+      src: 'http://google.com',
+    });
+  
+    tabGroup.addTab({
+      title: "Electron",
+      src: "http://electron.atom.io",
+      visible: true,
+      active: true
+    });
+  
+  </script>
+</body>
+</html>
