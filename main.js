@@ -7,6 +7,11 @@ const {
 } = require('electron')
 const path = require('path')
 const os = require('os')
+require('update-electron-app')({
+  repo: 'com-on-real/FKW-AllInOnePlace',
+  updateInterval: '5 minutes',
+  logger: require('electron-log')
+})
 
 function createWindow() {
   mainWindow = new BrowserWindow({

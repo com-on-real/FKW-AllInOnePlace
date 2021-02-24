@@ -25,8 +25,10 @@
     "custom-electron-titlebar": "^3.2.6",
     "electron-firebase": "^1.0.0",
     "electron-localshortcut": "^3.2.1",
+    "electron-log": "^4.3.2",
     "electron-package": "^0.1.0",
     "electron-tabs": "^0.15.0",
-    "firebase": "^8.2.9"
+    "firebase": "^8.2.9",
+    "update-electron-app": "^2.0.1"
   }
 }
